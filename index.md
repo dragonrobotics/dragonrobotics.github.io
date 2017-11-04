@@ -32,6 +32,9 @@ don't 'reach through' objects.**
 In short: if you have code that looks like `objectA.objectB.objectC.method()`,
 you are probably doing something wrong, and are strongly advised to look over
 the rest of your code for bad design.
+  * Certain methods and objects, such as pipelines, are _specifically designed_
+to be chained. They're exceptions to this rule, though you should keep the
+80-character line length limit in mind when using them.
 * **All files should have a header comment block.** You should be able to get
 a good, brief summary of the file's purpose and recent history by looking at
 the first few lines.
@@ -82,4 +85,41 @@ An example is given below:
 
 ## Procedures
 
-## Continuous Integration
+### Git and Github
+Please keep the following things in mind when working with Git and Github:
+* **Ensure that you have a name and email set in your Git configuration**:
+```shell
+$ git config --global user.name "[real name]"
+$ git config --global user.email "[email address associated with Github account]"
+```
+This is to ensure that we can track your changes accurately using Github's
+features.
+Obviously, this won't be possible if you're using a shared computer (i.e. a
+school laptop): as such, using a shared computer to make commits is discouraged.
+If you do have to use a shared computer, then pass the `--author=` option to
+`git commit`, with your name followed by your email in angle brackets:
+```shell
+$ git commit --author="A U Thor <author@example.com>"
+```
+* **Don't push or commit to `master` directly.** Use other branches or forks
+and make [Pull Requests](https://help.github.com/articles/about-pull-requests/)
+instead. In most cases, pushes to `master` will be disabled for everyone.
+This allows us to review your code and accept it before it becomes an actual
+part of the main codebase.
+* **All repositories on Github should be tagged with `team5002`.**
+This lets anyone find us by searching for 'team5002' on Github.
+* **Status checks and (possibly) code review will be required before Pull
+Requests are merged.**
+* **Non-inline documentation should be kept on repository wikis.** _Non-inline_
+documentation refers to all documentation not kept within the source files:
+for example, architectural and high-level ('executive') overviews, whitepapers,
+etc.
+* **Non-inline documentation should be non-technical.** Non-inline documents
+should be written as high-level overviews, usually in layman's terms. If you
+find yourself getting jargon-heavy or making references to specific aspects
+of the code, then your documentation probably belongs within the source code.
+  * Whitepapers and specialized reports, however, can be an exception: a detailed
+analysis of drivetrain kinematics, for example, would belong on a wiki, not
+within source code.
+
+### Continuous Integration
