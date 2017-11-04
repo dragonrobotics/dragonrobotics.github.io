@@ -1,16 +1,84 @@
 # Dragon Robotics Standards and Procedures
 
 ## Preface
-This document is intended to be a living document and should be updated as new cases and situtations come to light.
+This document is intended to be a living document and should be updated as new
+cases and situtations come to light.
 Also, the first, and foremost rule surrounding this coding style document is:
 
 **The rules are flexible, but don't be stupid.**
 
-We can't think through every single possible scenario, and for every rule we come up with a hundred exceptions will inevitably
-arise. On the other hand, however, each of these rules has a purpose.
+We can't think through every single possible scenario, and for every rule we
+come up with a hundred exceptions will inevitably arise. On the other hand,
+however, each of these rules has a purpose.
 If you need to break a rule, you'd better have a really good reason for it.
 
 ## Coding Style
+There are a couple of basic rules that we believe should be followed by everyone,
+with regards to code format and styling:
+
+* **Keep to 80-character lines.** Aside from simply looking neater, 80-column
+lines are easier to work with in terminals, when doing side-by-side comparisons
+and diffs, when working with multiple windows or panes, and so on.
+* **Tabs are 4 spaces wide.** Most of us are already used to 4-character indents,
+and 4-wide indents strike a good balance between being visible and being
+unobtrusive.
+* **Use soft tabs (spaces) instead of hard tabs.** Mixing tabs and spaces for
+indentation can only lead to code with screwed-up indentation.
+* **Keep everything as contained as possible.** Really, this is just general
+programming advice, but it's important enough to bear repeating. Keep all member
+variables private, unless you have a _really_ good reason to make them public.
+* **Keep to the [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter):
+don't 'reach through' objects.**
+In short: if you have code that looks like `objectA.objectB.objectC.method()`,
+you are probably doing something wrong, and are strongly advised to look over
+the rest of your code for bad design.
+* **All files should have a header comment block.** You should be able to get
+a good, brief summary of the file's purpose and recent history by looking at
+the first few lines.
+
+### Inline Documentation
+We (are planning to) use [Doxygen](https://www.stack.nl/~dimitri/doxygen/) to
+automatically generate documentation from source code, no matter what language
+said code uses.
+
+Doxygen can parse Javadoc-style comments. However, there are a few differences
+with Doxygen commenting vs. Javadoc commenting:
+* Doxygen uses Markdown for formatting, instead of HTML.
+* The file documentation block needs to be marked with the `\file` or `@file`
+tag; more on this later.
+
+### File Header Block Format
+The first lines of all files should be a comment block containing the following
+pieces of information, in roughly this order:
+1. **Opening `@file` tag and filename**: only include parts of the path if the
+filename alone is not unique.
+2. **Description**: both brief and detailed descriptions should be included,
+separated by an empty line. Use of the `@brief` tag is optional: everything
+up to the first period and newline will be taken as the brief description if
+the tag is omitted.
+3. **Author(s)**
+4. **Version**: try to adhere to [Semantic Versioning](http://semver.org) as
+much as possible.
+5. **Date modified**
+
+An example is given below:
+```c++
+/**
+ * @file example.cpp
+ * A brief description of my example code.
+ *
+ * This file has a bunch of example code that does strange and informative
+ * things and does a lot of other stuff too, I guess. This description is
+ * trying to be very long winded. It also has *Markdown*. This was the detailed
+ * description, and it fits within 80 character lines. This format stays the
+ * exact same when writing in Java, too.
+ *
+ * @author John Smith
+ * @author Haruhi Suzumiya
+ * @version 3.14.159-alpha+572e52d
+ * @date January 19, 2038
+ */
+```
 
 ## Procedures
 
