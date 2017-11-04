@@ -87,16 +87,17 @@ An example is given below:
 
 ### Git and Github
 Please keep the following things in mind when working with Git and Github:
-* **Ensure that you have a name and email set in your Git configuration**:
+* **Ensure that you have a name and email set in your Git configuration**.
+You can configure this by running the following commands in a shell:
 ```shell
 $ git config --global user.name "[real name]"
 $ git config --global user.email "[email address associated with Github account]"
 ```
 This is to ensure that we can track your changes accurately using Github's
 features.
-Obviously, this won't be possible if you're using a shared computer (i.e. a
+  * Obviously, this won't be possible if you're using a shared computer (i.e. a
 school laptop): as such, using a shared computer to make commits is discouraged.
-If you do have to use a shared computer, then pass the `--author=` option to
+  * If you do have to use a shared computer, then pass the `--author=` option to
 `git commit`, with your name followed by your email in angle brackets:
 ```shell
 $ git commit --author="A U Thor <author@example.com>"
@@ -108,6 +109,16 @@ This allows us to review your code and accept it before it becomes an actual
 part of the main codebase.
 * **All repositories on Github should be tagged with `team5002`.**
 This lets anyone find us by searching for 'team5002' on Github.
+* **All repositories on Github must be kept public.** This is actually an
+FRC rule. Any pre-written code used on a competition robot must be accessible
+to the public.
+* **All repositories on Github should be licensed under the
+[MIT License](https://choosealicense.com/licenses/mit/).** It's simple,
+permissive, and open-source.
+  * You can add this license (or others) automatically when you create a
+  repository.
+  * This rule, of course, does not take into account the potential for arcane
+  and unexpected legal circumstances, however unlikely those may be.
 * **Status checks and (possibly) code review will be required before Pull
 Requests are merged.**
 * **Non-inline documentation should be kept on repository wikis.** _Non-inline_
