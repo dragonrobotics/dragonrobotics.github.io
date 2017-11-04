@@ -147,3 +147,21 @@ There are three main things CI can and will do for us (specifically):
 We're (planning to) use [Travis CI](https://travis-ci.org) as our CI system;
 it integrates with both Github and Slack, and seems to be a good, well-polished
 platform.
+
+### Automated Testing
+Performing unit testing with robot code usually ranges from 'impossible' to
+'impractical' or 'very difficult'. Simulation-based unit or integration tests
+are out of the question:
+* The CI build servers probably don't have enough power to run robot
+simulations in the first place.
+* Simulation-based tests would take far too long to run.
+* Simulation-based tests may not be deterministic or consistent enough to be
+reliable as a test.
+
+Of course, this means that code that interfaces with hardware cannot be unit
+tested.
+
+Thus, unit testing is probably going to be less of a priority with us, as
+compared to other software development groups.
+What little automatic testing we perform, however, can easily be integrated
+with Travis CI.
