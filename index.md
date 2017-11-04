@@ -134,3 +134,16 @@ analysis of drivetrain kinematics, for example, would belong on a wiki, not
 within source code.
 
 ### Continuous Integration
+For most of us, there isn't really anything to keep in mind, with regards to
+continuous integration (aside from remembering that it is always there and
+watching). It's there simply to help ensure that problems don't slip through
+the cracks.
+
+There are three main things CI can and will do for us (specifically):
+1. **Make sure the code actually compiles.**
+2. **Automatically generate documentation using Doxygen.**
+3. **Automatically check code style using linters or custom scripts.**
+
+We're (planning to) use [Travis CI](https://travis-ci.org) as our CI system;
+it integrates with both Github and Slack, and seems to be a good, well-polished
+platform.
