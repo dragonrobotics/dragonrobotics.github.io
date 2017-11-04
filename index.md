@@ -19,7 +19,7 @@ with regards to code format and styling:
 * **Keep to 80-character lines.** Aside from simply looking neater, 80-column
 lines are easier to work with in terminals, when doing side-by-side comparisons
 and diffs, when working with multiple windows or panes, and so on.
-* **Tabs are 4 spaces wide.** Most of us are already used to 4-character indents,
+* **Indents are 4 spaces wide.** Most of us are already used to 4-character indents,
 and 4-wide indents strike a good balance between being visible and being
 unobtrusive.
 * **Use soft tabs (spaces) instead of hard tabs.** Mixing tabs and spaces for
