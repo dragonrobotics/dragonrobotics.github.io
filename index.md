@@ -1,9 +1,9 @@
-# Dragon Robotics Standards and Procedures
-
+# Dragon Robotics Programming Style and Procedures
 ## Preface
 This document is intended to be a living document and should be updated as new
 cases and situtations come to light.
-Also, the first, and foremost rule surrounding this coding style document is:
+
+The first and foremost rule to keep in mind when reading this document is:
 
 **The rules are flexible, but don't be stupid.**
 
@@ -19,6 +19,8 @@ with regards to code format and styling:
 * **Keep to 80-character lines.** Aside from simply looking neater, 80-column
 lines are easier to work with in terminals, when doing side-by-side comparisons
 and diffs, when working with multiple windows or panes, and so on.
+  * Strings are usually an exception to this rule, however, as long as they're not
+  too long.
 * **Indents are 4 spaces wide.** Most of us are already used to 4-character indents,
 and 4-wide indents strike a good balance between being visible and being
 unobtrusive.
