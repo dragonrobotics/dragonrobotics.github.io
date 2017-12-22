@@ -5,7 +5,7 @@ cases and situtations come to light.
 
 The first and foremost rule to keep in mind when reading this document is:
 
-**The rules are flexible, but don't be stupid.**
+**The rules are flexible, but think things through before you bend them.**
 
 We can't think through every single possible scenario, and for every rule we
 come up with a hundred exceptions will inevitably arise. On the other hand,
