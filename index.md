@@ -1,4 +1,7 @@
 # Dragon Robotics Programming Style and Procedures
+
+[You can find the Operations Manual here.](https://dragonrobotics.github.io/operations)
+
 ## Preface
 This document is intended to be a living document and should be updated as new
 cases and situtations come to light.
