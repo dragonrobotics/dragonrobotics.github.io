@@ -40,6 +40,12 @@ $ git commit
 This will (by default) drop you into the Vim editor to edit a commit message.
 Press `i` to start typing in your message, and hit `ESC` and then type `:wq` to save and exit.
 
+You can also add the commit message to your commit all in one motion, like this:
+
+```shell
+$ git commit -m "insert your commit message here"
+```
+
 ### Branching
 To create a new branch:
 ```shell
